@@ -54,10 +54,14 @@ jobs:
     # if: ${{ contains(github.event.*.labels.*.name, 'gpt review') }} # Optional; to run only when a label is attached
     runs-on: ubuntu-latest
     steps:
-      - uses: anc95/ChatGPT-CodeReview@main
+      - name: ChatGPT CodeReviewer by Chrysochrome
+        uses: Chrysochrome/ChatGPT-CodeReview@0.0.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_API_RESOURCE: openai
+          OPENAI_API_MODEL: gpt-4o
+          OPENAI_API_VERSION: 2024-05-01-preview
           # Optional
           LANGUAGE: Chinese
           OPENAI_API_ENDPOINT: https://api.openai.com/v1

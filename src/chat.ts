@@ -2,7 +2,7 @@ import OpenAI from "openai";
 
 const resource = process.env.OPENAI_API_RESOURCE;
 const model = process.env.OPENAI_API_MODEL || "gpt-4o";
-const apiVersion = process.env.OPENAI_API_VERSION;
+const apiVersion = process.env.OPENAI_API_VERSION || '2024-05-01-preview';
 
 export class Chat {
   private chatAPI: OpenAI;
