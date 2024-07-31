@@ -1,3 +1,4 @@
+/// <reference types="node" />
 export declare const config: {
     matcher: string;
 };
